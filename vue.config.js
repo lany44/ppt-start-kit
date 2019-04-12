@@ -1,3 +1,13 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.md$/i,
+          use: 'raw-loader',
+        },
+      ],
+    },
+  }
 }
