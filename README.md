@@ -1,4 +1,4 @@
-# ppt
+# ppt-start-kit
 
 
 ## Project setup
