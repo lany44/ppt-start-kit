@@ -1,4 +1,7 @@
-## Intro to Web Dev
+## Web前端开发名词解释大会
+
+@lanyang
+
 ---
 <!-- style: align-items:flex-start; -->
 
@@ -13,7 +16,7 @@ document
     .getElementById('paragraph')
     .addEventListener('click'， () => { 
         // do something
-    } );
+    });
 ```
 
 ---
@@ -33,11 +36,13 @@ document
 
 ### JavaScript
 - [TC39 github](https://github.com/tc39)， Proposals-Stage
-- ES5 ES6 ES7 ES8 ES9.. 多版本并行，各厂引擎各自实现。[Promise A+ & 实现](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- ES2015, ES + 年份.. 没有版本，各厂引擎各自实现。
+    - [Promise 实现](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- 模块化，CommonJS、AMD、CMD 以及 ES6 Module.mjs
+    - [模块化七日谈](https://github.com/Huxpro/js-module-7day)
 - Polyfill & [Babel](https://github.com/babel/babel)
-- 模块化，CommonJS、AMD、CMD 以及 ES6 Module.mjs （[模块化七日谈](https://github.com/Huxpro/js-module-7day)
 - [TypeScript](https://github.com/Microsoft/TypeScript) JS 的超集
-- [NodeJS](https://github.com/nodejs/node) (V8 + libuv + API binding)
+- [NodeJS](https://github.com/nodejs/node) (V8 + libuv (跨平台事件驱动异步IO框架) + API binding)
 - [Deno](https://github.com/denoland/deno)
 
 ---
@@ -46,10 +51,9 @@ document
 
 <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/AK_rwEp61ME" style="font-size: .7em;">https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/AK_rwEp61ME</a>
 
-- 跨平台的 GUI 容器
-- SKIA & DirectX & OpenGL
+- SKIA
 - CSS / JS 的全局污染
-- JavaScript 在浏览器里是独立的单线程，运行会阻塞渲染（行为丢失/白屏
+- JavaScript 独立的单线程，运行会阻塞渲染（行为丢失/白屏
 
 ---
 
@@ -58,18 +62,18 @@ document
 - 模版技术
     - 变量
     - 流程控制
-    - 复用
+    - 分治
 - 混写
 
 ---
 
 ### 前后端分离
+- [Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))  */ˈāˌjaks/ 2005*
 - [SPA](https://en.wikipedia.org/wiki/Single-page_application)
     - Gmail *2004*
-- [Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))  */ˈāˌjaks/ 2005*
-- 静态 CDN 广泛应用
+- CDN 广泛应用
 - 复杂度迁移到前端
-- 框架
+- 前端框架
     - 传统的 MVC - template/controller
         - backbone
         - ExtJS
@@ -79,39 +83,37 @@ document
 ---
 
 ### 浏览器中的 MVVM
-![](mvvm.png)
-
----
-
-### 组件与生命周期
-- [Vue 组件化](https://cn.vuejs.org/v2/guide/components.html#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%BB%84%E7%BB%87)
-- [Vue 组件生命周期图示](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
+- 组件
+- 双向绑定
+- 手动更新变自动更新
+- Angular *2010*
+    - .directive 
+    - .module
+    - .factory
+    - ...
+- Vue，比 Angular 更好的更新策略 / 简单的语法 / 官方配套设施 *2014*
 
 ---
 
 ### 浏览器中的 MVVM
-- 组件
-- 双向绑定
-- 手动更新变自动更新
-- Angular，后端智慧的集合与创新 *2010*
-    - .directive 
-    - .module
-    - .provider
-    - ...
-- Vue，比 Angular 更好的更新策略 / 简单的语法 / 官方配套设施 *2014*
+![](mvvm.png)
+- [Vue 组件化](https://cn.vuejs.org/v2/guide/components.html#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%BB%84%E7%BB%87)
+- [Vue 组件生命周期图示](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
 
 ---
 
 ### React - ALL IN JS
 - UI = F（state）
 - Virtual DOM
+    - learn once， write anywhere
     - diff
 - patch
     - Recat Native
 - Flux 思想
+    - global store
     - 单向数据流
     - 优缺点
-    - Redux - global store
+    - Redux
 
 ---
 
@@ -119,7 +121,7 @@ document
 - 组件化
     - 声明式
     - 生命周期
-- Template -> Virtual DOM
+- Virtual DOM
 - Flux
     - 单向数据流
     - global store
@@ -144,7 +146,7 @@ document
 
 ---
 
-### 开发之前 - 工具
+### 开发之前 - 构建工具
 - Webpack - 模块化打包工具
 - Gulp - 文件处理工具
 - Gulp + Webpack + hot-reload-server
@@ -152,7 +154,7 @@ document
 
 --- 
 
-### 开发之前 - 构建其他
+### 开发之前 - 其他
 - 代码规范 - eslint / tslint + prettier
 - 测试 -（
 
@@ -185,7 +187,7 @@ document
 ### 如何快速参与前端开发
 
 1. Ajax 与 SPA
-2. ES6+ 语法基础 
+2. ES2015+ 语法基础 
 3. React 基础
     - 组件化思想 & 组件的生命周期
     - props / state
