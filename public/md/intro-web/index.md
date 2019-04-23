@@ -21,25 +21,25 @@ document
 
 ---
 
-### HTML & CSS 
+### W3C小组 & TC39 委员会
 
-- W3C
-- HTML5 & CSS3
-- 多媒体标签
-- 动画 API 
-- 新的布局系统（Flex / Grid
-
-![](tattoo.jpg)
-![](cssisawsome.jpeg)
+- [W3C](https://github.com/w3c)
+- [TC39](https://github.com/tc39)， Proposals-Stage
+    - [如何参与 Web 标准讨论](https://www.zhihu.com/question/21508830/answer/18456376)
+- ES6 - ECMA2015
+- HTML5 与 WHATWG
+- CSS3
+    - ![](cssisawsome.jpeg)
 
 ---
 
 ### JavaScript
-- [TC39 github](https://github.com/tc39)， Proposals-Stage
-- ES2015, ES + 年份.. 没有版本，各厂引擎各自实现。
-    - [Promise 实现](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+
+- 各厂引擎各自实现
+    - [Promise 实现与差异](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 - 模块化，CommonJS、AMD、CMD 以及 ES6 Module.mjs
     - [模块化七日谈](https://github.com/Huxpro/js-module-7day)
+    - 前端构建
 - Polyfill & [Babel](https://github.com/babel/babel)
 - [TypeScript](https://github.com/Microsoft/TypeScript) JS 的超集
 - [NodeJS](https://github.com/nodejs/node) (V8 + libuv (跨平台事件驱动异步IO框架) + API binding)
@@ -54,6 +54,7 @@ document
 - SKIA
 - CSS / JS 的全局污染
 - JavaScript 独立的单线程，运行会阻塞渲染（行为丢失/白屏
+- [视频中文版](https://www.bilibili.com/video/av35265997?from=search&seid=8190571885546653028)
 
 ---
 
@@ -62,8 +63,7 @@ document
 - 模版技术
     - 变量
     - 流程控制
-    - 分治
-- 混写
+- 文件分离 & 混写
 
 ---
 
@@ -83,15 +83,15 @@ document
 ---
 
 ### 浏览器中的 MVVM
-- 组件
+- 组件化
 - 双向绑定
-- 手动更新变自动更新
+    - 手动更新变自动更新
 - Angular *2010*
     - .directive 
     - .module
     - .factory
     - ...
-- Vue，比 Angular 更好的更新策略 / 简单的语法 / 官方配套设施 *2014*
+- Vue = 比 Angular 更好的更新策略 / 简单的语法 / 官方配套设施 *2014*
 
 ---
 
@@ -109,11 +109,15 @@ document
     - diff
 - patch
     - Recat Native
-- Flux 思想
-    - global store
-    - 单向数据流
-    - 优缺点
-    - Redux
+- Flux
+
+---
+
+### Flux 思想
+- ![](flux.png)
+- 单向数据流
+- 优缺点
+- Redux
 
 ---
 
@@ -122,9 +126,8 @@ document
     - 声明式
     - 生命周期
 - Virtual DOM
-- Flux
-    - 单向数据流
-    - global store
+- 单向数据流
+- 局部状态与 global store 共存
 
 ---
 
@@ -135,27 +138,28 @@ document
 
 ### 开发之前 - 基于 NodeJS 的预处理
 - babel / TypeScript
-- less / sass 
-- 模块依赖打包
-- 处理静态资源
+- 模块化依赖打包
+    - 处理静态资源
 - 压缩
 - 方言翻译
     - coffee （js 方言
-    - less sass （模块化 css
-    - ejs pug/jade （模块化 html
+    - less / sass （模块化 css
+    - ejs pug/jade （模版
 
 ---
 
 ### 开发之前 - 构建工具
-- Webpack - 模块化打包工具
-- Gulp - 文件处理工具
+- bowserfiy + watchfiy + babelfiy
+- Webpack
+- Gulp - 构建任务管理工具
 - Gulp + Webpack + hot-reload-server
-- 官方/社区里的包装版
+- 官方 / 社区里的包装版
 
 --- 
 
 ### 开发之前 - 其他
-- 代码规范 - eslint / tslint + prettier
+- 代码规范 - eslint / tslint
+- 代码美化 - prettier
 - 测试 -（
 
 --- 
@@ -184,7 +188,7 @@ document
 
 ---
 
-### 如何快速参与前端开发
+### 如何快速参与福尔摩斯前端开发
 
 1. Ajax 与 SPA
 2. ES2015+ 语法基础 
@@ -192,7 +196,7 @@ document
     - 组件化思想 & 组件的生命周期
     - props / state
     - JSX 模版语法
-4. Redux 全局状态管理工具
+4. Dva 状态管理
 5. ~~构建打包~~
 
 ---
@@ -213,5 +217,7 @@ document
 ---
 
 ### Thanks!
+
+Q&A
 
 --- 
